@@ -1,0 +1,2250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<folder>
+	<name><![CDATA[Logger logs]]></name>
+	<tooltip><![CDATA[Logs]]></tooltip>
+	<description><![CDATA[ ]]></description>
+		<display id="2dead663-0161-1000-8002-7f00000170ac" type="" style="Table" enable="true">
+		<name><![CDATA[Logger logs last hour]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+	 , call_stack
+    , module
+    , action
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_60_min
+ORDER BY time_stamp DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																		</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="2dfc9dab-0161-1000-8003-7f000001e77a" type="" style="Table" enable="true">
+		<name><![CDATA[Logger logs 5 mins]]></name>
+		<description><![CDATA[Showing all logged events last 5 minutes in descending order]]></description>
+		<tooltip><![CDATA[Showing all logged events last 5 minutes in descending order]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+	 , call_stack
+    , module
+    , action
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_5_min
+ORDER BY time_stamp DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				null																																																																																																																																																																																																																																																																																																									</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item>	</display>
+	<display id="32e69446-0161-1000-8001-7f000001a96c" type="" style="Table" enable="true">
+		<name><![CDATA[Log-entries for scope]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT 
+	   max(time_stamp) over (partition by scope) - min(time_stamp) over (partition by scope) scope_elapsed
+	 , time_stamp
+    , time_stamp - LAG(time_stamp, 1) OVER (ORDER BY time_stamp) elapsed
+    ,case logger_level 
+			 when 1 then 'PERMANENT'
+			 when 2 then 'ERROR'
+			 when 4 then 'WARNING'
+			 when 8 then 'INFO'
+			 when 16 then 'DEBUG'
+			 when 32 then 'TIMING'
+			 when 64 then 'SYS_CTX'
+			 when 128 then 'APEX'
+			 else NULL
+		  end as level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+    , module
+    , action
+    , call_stack
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs
+WHERE (SCOPE = :SCOPE OR :SCOPE IS NULL)
+--AND TIME_STAMP BETWEEN NVL(CAST(:TIME_STAMP AS DATE) - 1, SYSDATE -1) AND NVL(CAST(:TIME_STAMP AS DATE), SYSDATE)
+AND TIME_STAMP BETWEEN :TIME_STAMP - 1 AND :TIME_STAMP + 1
+--> SYSDATE - 3/24
+ORDER BY time_stamp DESC]]></sql>
+			<binds>
+				<bind id="SCOPE">
+					<prompt><![CDATA[Scope]]></prompt>
+					<tooltip><![CDATA[Scope]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="TIME_STAMP">
+					<prompt><![CDATA[TIME_STAMP]]></prompt>
+					<tooltip><![CDATA[TIME_STAMP]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																								</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for this scope</title></item>	</display>
+	<display id="8a986e29-0161-1000-8007-7f0000015717" type="" style="Table" enable="true">
+		<name><![CDATA[Logger logs last day]]></name>
+		<description><![CDATA[Showing all logged events last day (24 hours) in descending order]]></description>
+		<tooltip><![CDATA[Showing all logged events last day (24 hours) in descending order]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+    , module
+    , action
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_day
+ORDER BY time_stamp DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																										</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="f195301c-0162-1000-8006-7f00000163d5" type="" style="Table" enable="true">
+		<name><![CDATA[Logger logs last week]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+    , module
+    , action
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_week
+ORDER BY time_stamp DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																		</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="f1a04374-0162-1000-8007-7f00000163d5" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events pr day last week]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-3394816,-10066279,-16751002,-26368]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,]]></DATA_MAP_COLUMNS>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[1]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<TITLE_TEXT><![CDATA[Logged events of type pr day last week]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNER,THIN,THINNER,THINNER,THINNER]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[true]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[true]]></PLOT_DATALABELS>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<DATA_MAP_COLNAMES><![CDATA[\,"COUNT(*)","EVENTDATE","LEVEL_TEXT","WEEKDAY"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select trunc(time_stamp) eventdate, /*to_char(time_stamp, 'day') weekday,*/ level_text, count(*)
+from logger_logs_1_week
+group by trunc(time_stamp), /*to_char(time_stamp, 'day'),*/ level_text
+order by trunc(time_stamp), 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																	</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="f71f19ea-0162-1000-8006-7f000001084f" type="" style="Chart" enable="true">
+		<name><![CDATA[Elapsed graph for scope]]></name>
+		<description><![CDATA[Seconds between log-entries in scope
+This report is broken - makes no sense]]></description>
+		<tooltip><![CDATA[This report is broken - makes no sense]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_LOCATION><![CDATA[AUTOMATIC]]></LEGEND_LOCATION>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<GRADIENT><![CDATA[false]]></GRADIENT>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<LEGEND><![CDATA[false]]></LEGEND>
+			<DATA_MAP_COLUMNS><![CDATA[\,"LOG_TIME"]]></DATA_MAP_COLUMNS>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[false]]></PLOT_DATALABELS>
+			<XAXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></XAXIS_LOGARITHMIC_BASE>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<DATA_MAP_COLNAMES><![CDATA[\,"'LOGTIME'","ELAPSED","LOG_TIME"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,"'LOGTIME'"]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[true]]></GRID>
+			<DATA_MAP_COUNT><![CDATA[1]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<XAXIS_SCALE_INCREMENT><![CDATA[10.0]]></XAXIS_SCALE_INCREMENT>
+			<XAXIS_SCALE_MAXIMUM><![CDATA[70.0]]></XAXIS_SCALE_MAXIMUM>
+			<TITLE_TEXT><![CDATA[Seconds between log-entries for scope]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNEST,THINNEST,THINNEST,THINNEST,THINNEST]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<DATA_MAP_VALUES><![CDATA[\,"ELAPSED"]]></DATA_MAP_VALUES>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNEST]]></PLOT_VGRID_WIDTH>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[WITH base_data AS
+ (SELECT row_number() OVER(ORDER BY time_stamp) rn
+		  ,time_stamp
+		  ,time_stamp - LAG(time_stamp, 1) OVER(ORDER BY time_stamp) elapsed
+  FROM   logger_logs
+  WHERE SCOPE = :SCOPE
+  AND TIME_STAMP BETWEEN :TIME_STAMP - 1 AND :TIME_STAMP + 1
+  --WHERE  scope = 'Auto:917713'
+  --AND    time_stamp BETWEEN SYSDATE - 1 AND SYSDATE + 1
+)
+SELECT 'Logtime'
+		,CAST(time_stamp AS DATE) log_time
+        --,time_stamp as log_time
+		,extract(hour FROM elapsed) * 3600 + extract(minute FROM elapsed) * 60 + extract(SECOND FROM elapsed) elapsed
+FROM   base_data
+ORDER  BY time_stamp]]></sql>
+			<binds>
+				<bind id="SCOPE">
+					<prompt><![CDATA[SCOPE]]></prompt>
+					<tooltip><![CDATA[SCOPE]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="TIME_STAMP">
+					<prompt><![CDATA[TIME_STAMP]]></prompt>
+					<tooltip><![CDATA[TIME_STAMP]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="fb93268f-0162-1000-8004-7f0000017bbd" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events pr hour last day]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-65485,-10066279,-13312,-16751053]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,"HOUR",]]></DATA_MAP_COLUMNS>
+			<SUBTITLE_TEXT><![CDATA[Logarithmic vertical scale]]></SUBTITLE_TEXT>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<XAXIS_SCALE_MAXIMUM><![CDATA[70.0]]></XAXIS_SCALE_MAXIMUM>
+			<TITLE_TEXT><![CDATA[Logged events of type pr hour last day]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNER,THINNER,THINNER,THINNER,THINNER]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<SUBTITLE><![CDATA[true]]></SUBTITLE>
+			<PLOT_DATALABELS_SLICE_POSITION><![CDATA[OUTSIDE_SLICE]]></PLOT_DATALABELS_SLICE_POSITION>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[false]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[true]]></PLOT_DATALABELS>
+			<XAXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></XAXIS_LOGARITHMIC_BASE>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<PLOT_RGRID_WIDTH><![CDATA[THINNEST]]></PLOT_RGRID_WIDTH>
+			<DATA_MAP_COLNAMES><![CDATA[\,"EVENTS_LOGGED","HOUR","LEVEL_TEXT"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,"LEVEL_TEXT",]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<XAXIS_SCALE_INCREMENT><![CDATA[10.0]]></XAXIS_SCALE_INCREMENT>
+			<PLOT_DATALABELS_SLICE_TYPE><![CDATA[PERCENT_VALUE]]></PLOT_DATALABELS_SLICE_TYPE>
+			<Y1AXIS_SCALE_MINIMUM_AUTOMATIC><![CDATA[true]]></Y1AXIS_SCALE_MINIMUM_AUTOMATIC>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,"EVENTS_LOGGED",]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select trunc(time_stamp, 'hh24') hour, level_text, count(*) events_logged
+from logger_logs_1_day
+group by trunc(time_stamp, 'hh24'), level_text
+order by 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					null																																																																																																																																																																																																																																									</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="06309c8b-0163-1000-8008-7f000001a3ad" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events pr hour last week]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-65485,-10066279,-13312,-16751053]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,"HOUR",]]></DATA_MAP_COLUMNS>
+			<SUBTITLE_TEXT><![CDATA[Logarithmic vertical scale]]></SUBTITLE_TEXT>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<XAXIS_SCALE_MAXIMUM><![CDATA[70.0]]></XAXIS_SCALE_MAXIMUM>
+			<TITLE_TEXT><![CDATA[Logged events of type pr hour last week]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNEST,THINNEST,THINNEST,THINNEST,THINNEST]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<XAXIS_TICK_LABEL_AUTO_ROTATE><![CDATA[false]]></XAXIS_TICK_LABEL_AUTO_ROTATE>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<SUBTITLE><![CDATA[true]]></SUBTITLE>
+			<PLOT_DATALABELS_SLICE_POSITION><![CDATA[OUTSIDE_SLICE]]></PLOT_DATALABELS_SLICE_POSITION>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[false]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[false]]></PLOT_DATALABELS>
+			<XAXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></XAXIS_LOGARITHMIC_BASE>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[NO_SKIP]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<PLOT_RGRID_WIDTH><![CDATA[THINNEST]]></PLOT_RGRID_WIDTH>
+			<DATA_MAP_COLNAMES><![CDATA[\,"EVENTS_LOGGED","HOUR","LEVEL_TEXT"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,"LEVEL_TEXT",]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<XAXIS_SCALE_INCREMENT><![CDATA[10.0]]></XAXIS_SCALE_INCREMENT>
+			<PLOT_DATALABELS_SLICE_TYPE><![CDATA[PERCENT_VALUE]]></PLOT_DATALABELS_SLICE_TYPE>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,"EVENTS_LOGGED",]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select trunc(l.time_stamp, 'hh24') hour, l.level_text, count(*) events_logged
+from logger_logs_1_week l
+group by trunc(l.time_stamp, 'hh24'), level_text
+order by 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+				
+				
+					
+					null																																																																																																																																																																																																																																																	</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="2ba7921e-0163-1000-8001-7f000001c34f" type="" style="Table" enable="true">
+		<name><![CDATA[Logged errors last day]]></name>
+		<description><![CDATA[Showing errors logged last day (24 hours) in descending order]]></description>
+		<tooltip><![CDATA[Showing errors logged last day (24 hours) in descending order]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+    , module
+    , action
+    , call_stack
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_day
+WHERE level_text = 'ERROR'
+AND (:UNIT_NAME IS NULL OR UNIT_NAME LIKE :UNIT_NAME)
+ORDER BY time_stamp DESC]]></sql>
+			<binds>
+				<bind id="UNIT_NAME">
+					<prompt><![CDATA[UNIT_NAME]]></prompt>
+					<tooltip><![CDATA[UNIT_NAME]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																														</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="5f109d23-0163-1000-8006-7f0000010cf7" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events pr day last month]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-3394816,-10066279,-16751002,-26368]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,,]]></DATA_MAP_COLUMNS>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<TITLE_TEXT><![CDATA[Logged events of type pr day last month]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNER,THIN,THINNER,THINNER,THINNER]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[true]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[true]]></PLOT_DATALABELS>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<DATA_MAP_COLNAMES><![CDATA[\,"COUNT(*)","LEVEL_TEXT","TRUNC(TIME_STAMP)"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,,]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,,]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select 
+  trunc(time_stamp) log_date,
+  level_text, 
+  count(*)
+from logger_logs l
+join logger.logger_levels ll on l.logger_level = ll.logger_level
+where time_stamp >= add_months(trunc(sysdate), -1)
+group by trunc(time_stamp), level_text
+order by 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																									</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="ab699244-0163-1000-8006-7f00000168d9" type="" style="Table" enable="true">
+		<name><![CDATA[Most frequent errors last week]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT sum(count(*)) over () total_occurrences
+    , count(*) occurrences
+    , round(ratio_to_report(count(*)) over ()*100, 1) pct_of_total
+    , unit_name
+    , line_no
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_week
+WHERE level_text = 'ERROR'
+GROUP BY UNIT_NAME, LINE_NO
+ORDER BY 2 DESC, UNIT_NAME]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					null																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="ab6acec4-0163-1000-8009-7f00000168d9" toolbar="false" ><title>Errors in this unit, last week</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="ab6acec4-0163-1000-8009-7f00000168d9" type="" style="Table" enable="true">
+		<name><![CDATA[Logged errors last week]]></name>
+		<description><![CDATA[Showing errors logged last week (7 days) in descending order]]></description>
+		<tooltip><![CDATA[Showing errors logged last week (7 days) in descending order]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT time_stamp
+    , level_text
+    , text
+    , unit_name
+    , line_no
+    , scope
+    , extra
+    , module
+    , action
+    , call_stack
+    , user_name
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_week
+WHERE level_text = 'ERROR'
+AND (:UNIT_NAME IS NULL OR UNIT_NAME LIKE :UNIT_NAME)
+ORDER BY time_stamp DESC]]></sql>
+			<binds>
+				<bind id="UNIT_NAME">
+					<prompt><![CDATA[UNIT_NAME]]></prompt>
+					<tooltip><![CDATA[UNIT_NAME]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																						</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="45559932-0164-1000-8002-7f000001f33e" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events last 24 hrs, sliding]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-65485,-10066279,-13312,-16751053]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,"HOURS_AGO",]]></DATA_MAP_COLUMNS>
+			<SUBTITLE_TEXT><![CDATA[Logarithmic vertical scale]]></SUBTITLE_TEXT>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<XAXIS_SCALE_MAXIMUM><![CDATA[70.0]]></XAXIS_SCALE_MAXIMUM>
+			<TITLE_TEXT><![CDATA[Logged events of type pr sliding hour last 24 hrs]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNER,THINNER,THINNER,THINNER,THINNER]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<XAXIS_TITLE_TEXT><![CDATA[Hours ago]]></XAXIS_TITLE_TEXT>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<XAXIS_TICK_LABEL_AUTO_ROTATE><![CDATA[true]]></XAXIS_TICK_LABEL_AUTO_ROTATE>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<SUBTITLE><![CDATA[true]]></SUBTITLE>
+			<PLOT_DATALABELS_SLICE_POSITION><![CDATA[OUTSIDE_SLICE]]></PLOT_DATALABELS_SLICE_POSITION>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[false]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[true]]></PLOT_DATALABELS>
+			<XAXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></XAXIS_LOGARITHMIC_BASE>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THICK]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<PLOT_RGRID_WIDTH><![CDATA[THINNEST]]></PLOT_RGRID_WIDTH>
+			<DATA_MAP_COLNAMES><![CDATA[\,"EVENTS_LOGGED","HOURS_AGO","LEVEL_TEXT"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,"LEVEL_TEXT",]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<XAXIS_SCALE_INCREMENT><![CDATA[10.0]]></XAXIS_SCALE_INCREMENT>
+			<PLOT_DATALABELS_SLICE_TYPE><![CDATA[PERCENT_VALUE]]></PLOT_DATALABELS_SLICE_TYPE>
+			<Y1AXIS_SCALE_MINIMUM_AUTOMATIC><![CDATA[true]]></Y1AXIS_SCALE_MINIMUM_AUTOMATIC>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<XAXIS_TITLE><![CDATA[true]]></XAXIS_TITLE>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,"EVENTS_LOGGED",]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select extract(day from systimestamp-time_stamp) * 24 + extract(hour from systimestamp-time_stamp) hours_ago, level_text, count(*) events_logged
+from logger_logs_1_day
+--where time_stamp >= systimestamp - 1
+group by extract(day from systimestamp-time_stamp) * 24 + extract(hour from systimestamp-time_stamp), level_text
+order by 1 desc, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					null																																																																																																																																																																																																																																																</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="455c237c-0164-1000-8009-7f000001f33e" type="" style="Table" enable="true">
+		<name><![CDATA[Most frequent errors today]]></name>
+		<description><![CDATA[Most frequent errors since midnight]]></description>
+		<tooltip><![CDATA[Most frequent errors since midnight]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT sum(count(*)) over () total_occurrences
+    , count(*) occurrences
+    , round(ratio_to_report(count(*)) over ()*100, 1) pct_of_total
+    , unit_name
+    , line_no
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_day
+WHERE level_text = 'ERROR'
+AND time_stamp >= trunc(systimestamp)
+GROUP BY UNIT_NAME, LINE_NO
+ORDER BY 2 DESC, UNIT_NAME]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="4560d213-0164-1000-800b-7f000001f33e" type="" style="Table" enable="true">
+		<name><![CDATA[Most frequent errors yesterday]]></name>
+		<description><![CDATA[Most frequent errors yesterday]]></description>
+		<tooltip><![CDATA[Most frequent errors yesterday]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT sum(count(*)) over () total_occurrences
+    , count(*) occurrences
+    , round(ratio_to_report(count(*)) over ()*100, 1) pct_of_total
+    , unit_name
+    , line_no
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_week
+WHERE level_text = 'ERROR'
+AND time_stamp between trunc(systimestamp)-1 and trunc(systimestamp)
+GROUP BY UNIT_NAME, LINE_NO
+ORDER BY 2 DESC, UNIT_NAME]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="1df0b00f-0165-1000-8001-7f0000010427" type="" style="Chart" enable="true">
+		<name><![CDATA[Log events pr day last year]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-3394816,-10066279,-16751002,-26368]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,,]]></DATA_MAP_COLUMNS>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<TITLE_TEXT><![CDATA[Logged events of type pr day last year]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNEST,THINNER,THINNEST,THINNEST,THINNEST]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<XAXIS_TICK_LABEL_AUTO_ROTATE><![CDATA[true]]></XAXIS_TICK_LABEL_AUTO_ROTATE>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[true]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[false]]></PLOT_DATALABELS>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<DATA_MAP_COLNAMES><![CDATA[\,"COUNT(*)","LEVEL_TEXT","TRUNC(TIME_STAMP)"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,,]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,,]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select 
+  trunc(time_stamp) log_date,
+  level_text, 
+  count(*)
+from logger_logs l
+join logger.logger_levels ll on l.logger_level = ll.logger_level
+where time_stamp >= add_months(trunc(sysdate), -12)
+group by trunc(time_stamp), level_text
+order by 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																													</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="c8d74d42-0165-1000-8005-7f0000017728" type="" style="Table" enable="true">
+		<name><![CDATA[Most frequent errors last x hrs]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT sum(count(*)) over () total_occurrences
+    , count(*) occurrences
+    , round(ratio_to_report(count(*)) over ()*100, 1) pct_of_total
+    , unit_name
+    , line_no
+    , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
+    , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
+    , 'PACKAGE BODY' sdev_link_type
+FROM logger_logs_1_week
+WHERE level_text = 'ERROR'
+AND time_stamp >= systimestamp - nvl(:hours_ago, 6)/24
+GROUP BY UNIT_NAME, LINE_NO
+ORDER BY 2 DESC, UNIT_NAME]]></sql>
+			<binds>
+				<bind id="hours_ago">
+					<prompt><![CDATA[hours_ago]]></prompt>
+					<tooltip><![CDATA[hours_ago]]></tooltip>
+					<value><![CDATA[6]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+	<display id="c8e196f9-0165-1000-8013-7f0000017728" type="" style="Chart" enable="true">
+		<name><![CDATA[Logged errors pr day last year]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_DATATIPS_TEXT><![CDATA[true]]></PLOT_DATATIPS_TEXT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LOGARITHMIC_SCALE><![CDATA[true]]></Y1AXIS_LOGARITHMIC_SCALE>
+			<LEGEND_LOCATION><![CDATA[TOP]]></LEGEND_LOCATION>
+			<PLOT_SERIES_OPTIONS_COLOR><![CDATA[\,-16764058,-3394816,-10066279,-16751002,-26368]]></PLOT_SERIES_OPTIONS_COLOR>
+			<Y1AXIS_REFOBJ_COUNT><![CDATA[0]]></Y1AXIS_REFOBJ_COUNT>
+			<Y1AXIS_REFOBJ_LINE_VALUE><![CDATA[\]]></Y1AXIS_REFOBJ_LINE_VALUE>
+			<DATA_MAP_COLUMNS><![CDATA[\,,]]></DATA_MAP_COLUMNS>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[60.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<TYPE><![CDATA[LINE_VERT_ABS]]></TYPE>
+			<DATA_MAP_COUNT><![CDATA[2]]></DATA_MAP_COUNT>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<TITLE_TEXT><![CDATA[Logged events of type pr day last year]]></TITLE_TEXT>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID><![CDATA[true]]></PLOT_HGRID>
+			<PLOT_DATATIPS_VALUE><![CDATA[true]]></PLOT_DATATIPS_VALUE>
+			<PLOT_SERIES_OPTIONS_LINE_WIDTH><![CDATA[\,THINNEST,THINNER,THINNEST,THINNEST,THINNEST]]></PLOT_SERIES_OPTIONS_LINE_WIDTH>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNEST]]></PLOT_HGRID_WIDTH>
+			<XAXIS_TICK_LABEL_AUTO_ROTATE><![CDATA[true]]></XAXIS_TICK_LABEL_AUTO_ROTATE>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[10.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<PLOT_SERIES_OPTIONS_FITLINE_TYPE><![CDATA[\,NONE,NONE,NONE,NONE,NONE]]></PLOT_SERIES_OPTIONS_FITLINE_TYPE>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<FOOTNOTE><![CDATA[true]]></FOOTNOTE>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<PLOT_DATALABELS><![CDATA[false]]></PLOT_DATALABELS>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<GRID_WIDTH><![CDATA[THINNEST]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<PLOT_SERIES_OPTIONS_LINE_TYPE><![CDATA[\,LINE,LINE,LINE,LINE,LINE]]></PLOT_SERIES_OPTIONS_LINE_TYPE>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y1AXIS_REFOBJ_VISIBLE><![CDATA[\]]></Y1AXIS_REFOBJ_VISIBLE>
+			<DATA_MAP_COLNAMES><![CDATA[\,"COUNT(*)","LEVEL_TEXT","TRUNC(TIME_STAMP)"]]></DATA_MAP_COLNAMES>
+			<DATA_MAP_SERIES><![CDATA[\,,]]></DATA_MAP_SERIES>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[false]]></GRID>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[false]]></THREED>
+			<DATA_MAP_VALUES><![CDATA[\,,]]></DATA_MAP_VALUES>
+			<FOOTNOTE_TEXT><![CDATA[Logarithmic vertical scale]]></FOOTNOTE_TEXT>
+			<PLOT_VGRID><![CDATA[false]]></PLOT_VGRID>
+			<Y1AXIS_REFOBJ_TEXT><![CDATA[\]]></Y1AXIS_REFOBJ_TEXT>
+			<Y1AXIS_REFOBJ_WIDTH><![CDATA[\]]></Y1AXIS_REFOBJ_WIDTH>
+			<TITLE><![CDATA[true]]></TITLE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<PLOT_SERIES_OPTIONS_MARKER_SHAPE><![CDATA[\,SQUARE,CIRCLE,DIAMOND,PLUS,AUTOMATIC]]></PLOT_SERIES_OPTIONS_MARKER_SHAPE>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+			<Y1AXIS_REFOBJ_COLOR><![CDATA[\]]></Y1AXIS_REFOBJ_COLOR>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[select 
+  trunc(time_stamp) log_date,
+  level_text, 
+  count(*)
+from logger_logs l
+join logger.logger_levels ll on l.logger_level = ll.logger_level
+where time_stamp >= add_months(trunc(sysdate), -12)
+and l.logger_level IN (2)
+group by trunc(time_stamp), ll.level_text
+order by 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																					</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+</folder>
+</displays>
