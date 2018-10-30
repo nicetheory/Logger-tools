@@ -27,6 +27,7 @@
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_60_min
 ORDER BY time_stamp DESC]]></sql>
 		</query>
@@ -98,14 +99,18 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																		</data>
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																						</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item>	</display>
 	<display id="2dfc9dab-0161-1000-8003-7f000001e77a" type="" style="Table" enable="true">
 		<name><![CDATA[Logger logs 5 mins]]></name>
 		<description><![CDATA[Showing all logged events last 5 minutes in descending order]]></description>
@@ -129,6 +134,7 @@ ORDER BY time_stamp DESC]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_5_min
 ORDER BY time_stamp DESC]]></sql>
 		</query>
@@ -200,9 +206,13 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
-				null																																																																																																																																																																																																																																																																																																									</data>
+				null																																																																																																																																																																																																																																																																																																																													</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -332,7 +342,11 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																								</data>
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -362,6 +376,7 @@ ORDER BY time_stamp DESC]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_day
 ORDER BY time_stamp DESC]]></sql>
 		</query>
@@ -430,19 +445,23 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																										</data>
+					null																																																																																																																																																																																																																																																																																																																														</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item>	</display>
 	<display id="f195301c-0162-1000-8006-7f00000163d5" type="" style="Table" enable="true">
 		<name><![CDATA[Logger logs last week]]></name>
 		<description><![CDATA[]]></description>
@@ -465,6 +484,7 @@ ORDER BY time_stamp DESC]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_week
 ORDER BY time_stamp DESC]]></sql>
 		</query>
@@ -524,13 +544,6 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-				
-				
-					
-					
-					
-					
-					
 					
 					
 					
@@ -540,14 +553,25 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																																		</data>
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																																						</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item>	</display>
 	<display id="f1a04374-0162-1000-8007-7f00000163d5" type="" style="Chart" enable="true">
 		<name><![CDATA[Log events pr day last week]]></name>
 		<description><![CDATA[]]></description>
@@ -672,7 +696,11 @@ order by trunc(time_stamp), 2]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																	</data>
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																					</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -822,7 +850,11 @@ ORDER  BY time_stamp]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																												</data>
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -962,10 +994,14 @@ order by 1, 2]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
-					null																																																																																																																																																																																																																																									</data>
+					null																																																																																																																																																																																																																																																													</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1104,13 +1140,17 @@ order by 1, 2]]></sql>
 					
 					
 					
-				
-				
+					
+					
+					
 					
 				
 				
 					
-					null																																																																																																																																																																																																																																																	</data>
+				
+				
+					
+					null																																																																																																																																																																																																																																																																					</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1141,6 +1181,7 @@ order by 1, 2]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_day
 WHERE level_text = 'ERROR'
 AND (:UNIT_NAME IS NULL OR UNIT_NAME LIKE :UNIT_NAME)
@@ -1206,33 +1247,37 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-				
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 					
 					
 					
 				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
 				
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																														</data>
+					null																																																																																																																																																																																																																																																																																																																																		</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item>	</display>
 	<display id="5f109d23-0163-1000-8006-7f0000010cf7" type="" style="Chart" enable="true">
 		<name><![CDATA[Log events pr day last month]]></name>
 		<description><![CDATA[]]></description>
@@ -1358,13 +1403,17 @@ order by 1, 2]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
 					
 					
 					
-					null																																																																																																																																																																																																																																									</data>
+					null																																																																																																																																																																																																																																																													</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1389,6 +1438,7 @@ order by 1, 2]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_week
 WHERE level_text = 'ERROR'
 GROUP BY UNIT_NAME, LINE_NO
@@ -1440,16 +1490,20 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
-					null																																																																																																																																																																																												</data>
+					null																																																																																																																																																																																																																</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="ab6acec4-0163-1000-8009-7f00000168d9" toolbar="false" ><title>Errors in this unit, last week</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="ab6acec4-0163-1000-8009-7f00000168d9" toolbar="false" ><title>Errors in this unit, last week</title></item>	</display>
 	<display id="ab6acec4-0163-1000-8009-7f00000168d9" type="" style="Table" enable="true">
 		<name><![CDATA[Logged errors last week]]></name>
 		<description><![CDATA[Showing errors logged last week (7 days) in descending order]]></description>
@@ -1473,6 +1527,7 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_week
 WHERE level_text = 'ERROR'
 AND (:UNIT_NAME IS NULL OR UNIT_NAME LIKE :UNIT_NAME)
@@ -1532,24 +1587,6 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-				
-				
-					
-					
-					
-					
-					
-					
-				
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 					
 					
@@ -1559,14 +1596,36 @@ ORDER BY time_stamp DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																																						</data>
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																																										</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="32e69446-0161-1000-8001-7f000001a96c" toolbar="false" ><title>Log-entries for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="f71f19ea-0162-1000-8006-7f000001084f" toolbar="false" ><title>Elapsed graph for scope</title></item><item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title></item>	</display>
 	<display id="45559932-0164-1000-8002-7f000001f33e" type="" style="Chart" enable="true">
 		<name><![CDATA[Log events last 24 hrs, sliding]]></name>
 		<description><![CDATA[]]></description>
@@ -1685,30 +1744,34 @@ order by 1 desc, 2]]></sql>
 					
 					
 					
-				
-				
-				
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 					
 					
 					
 				
 				
+				
 					
-					null																																																																																																																																																																																																																																																</data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					null																																																																																																																																																																																																																																																																				</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1733,6 +1796,7 @@ order by 1 desc, 2]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_day
 WHERE level_text = 'ERROR'
 AND time_stamp >= trunc(systimestamp)
@@ -1775,6 +1839,10 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
@@ -1787,14 +1855,14 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																												</data>
+					null																																																																																																																																																																																																																</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title></item>	</display>
 	<display id="4560d213-0164-1000-800b-7f000001f33e" type="" style="Table" enable="true">
 		<name><![CDATA[Most frequent errors yesterday]]></name>
 		<description><![CDATA[Most frequent errors yesterday]]></description>
@@ -1812,6 +1880,7 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_week
 WHERE level_text = 'ERROR'
 AND time_stamp between trunc(systimestamp)-1 and trunc(systimestamp)
@@ -1854,6 +1923,10 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
@@ -1866,14 +1939,14 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																												</data>
+					null																																																																																																																																																																																																																</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title></item>	</display>
 	<display id="1df0b00f-0165-1000-8001-7f0000010427" type="" style="Chart" enable="true">
 		<name><![CDATA[Log events pr day last year]]></name>
 		<description><![CDATA[]]></description>
@@ -1980,34 +2053,38 @@ order by 1, 2]]></sql>
 					
 					
 					
-				
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 					
 					
 					
 				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
 				
 					
 					
 					
 					
-					null																																																																																																																																																																																																																																													</data>
+					null																																																																																																																																																																																																																																																																	</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -2032,6 +2109,7 @@ order by 1, 2]]></sql>
     , substr(unit_name, 1, instr(unit_name, '.') - 1) sdev_link_owner
     , regexp_replace(unit_name, '(.*\.)(.*)(\..*)', '\2')  sdev_link_name
     , 'PACKAGE BODY' sdev_link_type
+    , line_no sdev_link_line
 FROM logger_logs_1_week
 WHERE level_text = 'ERROR'
 AND time_stamp >= systimestamp - nvl(:hours_ago, 6)/24
@@ -2070,6 +2148,10 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
+					
+					
+					
+					
 				
 				
 					
@@ -2094,14 +2176,14 @@ ORDER BY 2 DESC, UNIT_NAME]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																												</data>
+					null																																																																																																																																																																																																																</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
 				</footer>
 				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
 			</pdf>
-<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title><sql><![CDATA[]]></sql><script language="js"><![CDATA[]]></script><help></help></item>	</display>
+<item  reload="false"  reloadparent="false" removeFromParent="false" className="oracle.dbtools.raptor.report.addin.DrillReportAction" classArgs="2ba7921e-0163-1000-8001-7f000001c34f" toolbar="false" ><title>Errors in this unit</title></item>	</display>
 	<display id="c8e196f9-0165-1000-8013-7f0000017728" type="" style="Chart" enable="true">
 		<name><![CDATA[Logged errors pr day last year]]></name>
 		<description><![CDATA[]]></description>
@@ -2202,32 +2284,6 @@ order by 1, 2]]></sql>
 					
 					
 					
-				
-				
-					
-					
-					
-					
-					
-					
-					
-				
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
 					
 					
 					
@@ -2238,7 +2294,37 @@ order by 1, 2]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																					</data>
+					
+					
+					
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																									</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
